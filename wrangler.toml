@@ -2,7 +2,7 @@ name = "snapalive-ar"
 compatibility_date = "2023-11-20"
 
 [vars]
-ADMIN_PASS = "snapalive06"
+ADMIN_API_KEY = "snapalive06"
 
 [[d1_databases]]
 binding = "DB"
