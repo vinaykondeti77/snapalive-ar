@@ -1,6 +1,17 @@
 {
   "version": 1,
-  "routes": [
-    { "pattern": "/api/*", "zone_name": "", "script": "" }
+  "include": [
+    "/",
+    "/index.html",
+    "/admin",
+    "/admin.html",
+    "/gallery",
+    "/gallery.html",
+    "/ar",
+    "/ar/index.html",
+    "/ar/*"
+  ],
+  "exclude": [
+    "/api/*"
   ]
 }
