@@ -1,0 +1,10 @@
+name = "snapalive-ar"
+compatibility_date = "2023-11-20"
+
+[vars]
+ADMIN_PASS = "snapalive06"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "snapalive-db"
+database_id = "fa80fd3d-4314-4f4d-aa0e-f09d946b2d3f"

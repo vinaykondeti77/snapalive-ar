@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SnapAlive</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <h1>SnapAlive</h1>
+    <p>Enter event code</p>
+
+    <input id="event" placeholder="e.g. Birthday2025">
+    <button onclick="openEvent()">Open Event</button>
+    <button onclick="viewGallery()">View Gallery</button>
+
+    <script>
+        function openEvent() {
+            const code = document.getElementById('event').value.trim();
+            window.location.href = `/api/login?eventCode=${code}`;
+        }
+
+        function viewGallery() {
+            const code = document.getElementById('event').value.trim();
+            window.location.href = `/gallery.html?eventCode=${code}`;
+        }
+    </script>
+</body>
+</html>

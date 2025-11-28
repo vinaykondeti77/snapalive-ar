@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <h1>Event Gallery</h1>
+
+    <div id="imgs"></div>
+
+    <script>
+        async function loadGallery() {
+            const params = new URLSearchParams(window.location.search);
+            const code = params.get("eventCode");
+
+            const res = await fetch(`/api/targets?eventCode=${code}`);
+            const data = await res.json();
+
+            const box = document.getElementById("imgs");
+            box.innerHTML = data.map(i =>
+                `<img src="${i.thumbnail_url}" style="width:150px;margin:10px;">`
+            ).join("");
+        }
+
+        loadGallery();
+    </script>
+</body>
+</html>
